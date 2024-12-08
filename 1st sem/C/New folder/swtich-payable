@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<conio.h>
+int main(){
+    int ch;
+    float tax, price, sell_price;
+
+    printf("Select the name of item as following \n 1 for grocery \n 2 for cosmetics \n 3 for clothing \n 4 for liquor");
+    scanf("%d", &ch);
+
+    printf("\nEnter the price of the item");
+    scanf("%f", &price);
+
+    switch (ch)
+    {
+    case 1:
+        tax = 0.08;
+        break;
+    
+    case 2:
+        tax = 0.1;
+        break;
+
+    case 3:
+        tax = 0.12;
+        break;
+
+    case 4:
+        tax = 0.18;
+        break;
+
+    default:
+        break;
+    }
+
+    sell_price = price + tax * price;
+
+    if(sell_price>=5000){
+        sell_price = sell_price - 0.02 * sell_price;
+    }
+
+    printf("Your total paying amount is %.2f", sell_price);
+
+    return 0;
+}

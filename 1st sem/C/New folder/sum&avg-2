@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main(){
+    int n, num[30], i, j;
+    int sum;
+    float avg;
+    printf("Enter the value of N\t");
+    scanf("%d", &n);
+
+    printf("\nEnter the values\n");
+    for(i=0; i<n; ++i){
+        scanf("%d", &num[i]);
+    }
+
+    for(i=0; i<n; i++){
+        if (num[i]>0)
+        {
+            sum += num[i];
+        }
+        
+    }
+
+    avg = ((float)sum/n)*1.0;
+
+    printf("The sum is %d and average is %.2f", sum, avg);
+    return 0;
+}
